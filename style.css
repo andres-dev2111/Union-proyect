@@ -2,8 +2,22 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Archivo Black', sans-serif;
+    font-family:'Font-union', 'Archivo Black', sans-serif;
 }
+:root {
+    --Grey-logo: rgb(167,167,166);
+    --Dark-grey-logo: #646464;
+    --White:#F4F4F4;
+    --logo-font-size: 60px;
+    --nav-font-size: 22px;
+    --Blue-logo: rgb(3,87,167); 
+  }
+
+@font-face {
+    font-family: 'Font-union';
+    src: url('fonts/SF_Sports_Night.ttf') format('truetype');
+}
+
 html{
     width: 100vw;
     height: 100vh;
@@ -20,7 +34,8 @@ body {
     justify-content:space-between;   
     align-items: center;
     padding:0 50px;
-    border-bottom: 3px solid #646464; 
+    border-bottom: 5px solid #646464; 
+    background-color: var(--White);
 }
 .Logo img{
     width: 150px;
@@ -37,27 +52,41 @@ body {
 .Navigation li a {
     text-decoration: none;
     color: #646464;
+    font-size: var(--nav-font-size);
 }
 
 main {
+    
     display: flex;
     width: 100%;
     height: 81%;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(90deg, rgba(37,91,145,1) 12%, rgba(34,111,189,1) 51%, rgba(4,85,168,1) 85%, rgba(35,109,177,1) 100%);
+    background: rgb(2,19,52);
+background: linear-gradient(90deg, rgba(2,19,52,1) 12%, rgba(0,64,150,1) 51%, rgba(4,88,183,1) 85%, rgba(4,88,183,1) 100%);
 }
-
+#Background-image{
+    position: fixed; /* Fija la imagen en la ventana del navegador */
+    bottom: 1;
+    top: 1;
+    left: 1;
+    width: 80%; /* Ajusta el ancho al 100% de la ventana del navegador */
+    height: 80%; /* Ajusta la altura al 100% de la ventana del navegador */
+    z-index: 0; /* Coloca la imagen detrás de los otros elementos */
+    opacity: 0.6; /* Ajusta la opacidad según tus preferencias */
+    /* Otros estilos para la imagen de fondo, como filtros o efectos */
+  }
 .Title > h3 {
     text-align: center;
-    color: #FFFF;
+    color: var(--White);
+    font-family: 'Archivo Black';
+    
 }
-
-
-
-
+.Title{
+    margin-top: 50px;
+}
 .two-color-text {
-    font-size: 50px; /* Tamaño de fuente opcional */
+    font-size: var(--logo-font-size); /* Tamaño de fuente opcional */
     position: relative;
     color: transparent;
     
@@ -68,9 +97,28 @@ main {
     position: absolute;
     top: 0;
     left: 0;
-    background: linear-gradient(0deg, rgb(167,167,166) 60%, #FFFF 40%);
+    background: linear-gradient(0deg, var(--Grey-logo) 61%, var(--White) 39%);
     background-clip: text;
     -webkit-background-clip: text; /* Para navegadores webkit (Safari, Chrome) */
     color: transparent;
   }
 
+  .two-color-text-nav {
+    font-size: var(--logo-font-size); /* Tamaño de fuente opcional */
+    position: relative;
+    color: transparent;
+    
+  }
+
+  .two-color-text-nav::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(0deg, var(--Dark-grey-logo) 61%, var(--Blue-logo) 39%);
+    background-clip: text;
+    -webkit-background-clip: text; /* Para navegadores webkit (Safari, Chrome) */
+    color: transparent;
+  }
+
+ 
