@@ -40,19 +40,24 @@ body {
 }
 
 main {
+    display: flex;
     width: 100%;
     height: 81%;
-    background: rgb(37,91,145);
-background: linear-gradient(90deg, rgba(37,91,145,1) 12%, rgba(34,111,189,1) 51%, rgba(4,85,168,1) 85%, rgba(35,109,177,1) 100%);
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(90deg, rgba(37,91,145,1) 12%, rgba(34,111,189,1) 51%, rgba(4,85,168,1) 85%, rgba(35,109,177,1) 100%);
 }
 
-.Title{
-    
-
+.Title > h3 {
+    text-align: center;
+    color: #FFFF;
 }
+
+
+
 
 .two-color-text {
-    font-size: 40px; /* Tamaño de fuente opcional */
+    font-size: 50px; /* Tamaño de fuente opcional */
     position: relative;
     color: transparent;
     
@@ -63,8 +68,9 @@ background: linear-gradient(90deg, rgba(37,91,145,1) 12%, rgba(34,111,189,1) 51%
     position: absolute;
     top: 0;
     left: 0;
-    background: linear-gradient(0deg, #FFFF 50%, #1377db 50%);
+    background: linear-gradient(0deg, rgb(167,167,166) 60%, #FFFF 40%);
     background-clip: text;
     -webkit-background-clip: text; /* Para navegadores webkit (Safari, Chrome) */
     color: transparent;
   }
+
