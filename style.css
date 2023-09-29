@@ -10,7 +10,7 @@
     --Grey-logo: rgb(167,167,166);
     --Dark-grey-logo: #646464;
     --White:#F4F4F4;
-    --logo-font-size: 60px;
+    --logo-font-size: 55px;
     --nav-font-size: 22px;
     --Blue-logo: rgb(3,87,167); 
   }
@@ -31,7 +31,7 @@ body {
 
 .header-main{
     display: flex;
-    width: 100%;
+    width: 100vw;
     height: 13%;
     justify-content:space-between;   
     align-items: center;
@@ -129,14 +129,15 @@ main {
     color: transparent;
   }
 
+
  
 /* Resposive */
   
 @media (max-width:768px){
     :root { 
-        --logo-font-size: 54px;     
+        --logo-font-size: 50px;     
       }
-    .bar-menu{
+      .oculto{
         display: none;  
     }
     #menu-icon{
@@ -144,5 +145,10 @@ main {
         cursor: pointer;
         font-size: 40px;   
     }
-   
+    .Navigation ul {
+        display: grid;
+
+    }
+    
+    
 }
